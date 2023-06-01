@@ -1,0 +1,48 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 555px;
+  padding-bottom: 25px;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.social__item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid $color-yellow;
+  outline: none;
+  transition: background-color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $color-yellow;;
+  }
+}
+
+.social__link {
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: $color-yellow;
+  }
+}
+
+.social__link:hover,
+.social__link:focus {
+  svg {
+    fill: $color-default-white;
+  }
+}
+

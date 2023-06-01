@@ -1,0 +1,61 @@
+<section class="contact js-contact" data-block="contact">
+  <div class="container">
+    <h2 class="section-title contact__title">Свяжитесь со мной</h2>
+    <div class="contact__content">
+      <div class="contact__wrap anim-items anim-no-hide">
+        <h3 class="contact__subtitle">Связяться</h3>
+        <form class="form" data-check-form="true" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="form__item">
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input name="userName" placeholder="Имя" class="field-text__input" type="text" data-check-pattern="^[a-zа-яё]+.{2,}">
+                <span class="field-text__help-text">Имя юзера. Не менее 3-х символов. Обязательно.</span>
+              </span>
+            </label>
+          </div>
+          <div class="form__item">
+            <label class="field-text">
+              <span class="field-text__input-wrap">
+                <input name="mail" placeholder="email" class="field-text__input" type="email" data-check-pattern="[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+                <span class="field-text__help-text">Обязательно.</span>
+              </span>
+            </label>
+          </div>
+          <div class="form__textarea">
+            <textarea name="textarea" placeholder="Сообщение" autocapitalize="off"></textarea>
+          </div>
+          <button class="btn link-default form__btn" type="submit">Отправить</button>
+        </form>
+      </div>
+      <div class="contact-info anim-items anim-no-hide">
+        <h3 class="contact__subtitle">Адрес</h3>
+        <ul class="list-reset contact-info__list">
+          <li class="contact-info__item">
+            <div class="contact-info__icon-wrap">
+              <svg width="25" height="25">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-persone"></use>
+              </svg>
+            </div>
+            <p class="contact-info__text">г.Санкт-Петербург ул. Большая Конюшенная, 19/8</p>
+          </li>
+          <li class="contact-info__item">
+            <div class="contact-info__icon-wrap">
+              <svg width="20" height="20">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <a class="contact-info__link" href="tel:89183650607">8-800-200-00-00</a>
+          </li>
+          <li class="contact-info__item">
+            <div class="contact-info__icon-wrap">
+              <svg width="20" height="20">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
+            </div>
+            <a class="contact-info__link" href="mailto:support@example.com">support@example.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

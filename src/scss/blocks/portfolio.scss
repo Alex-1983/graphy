@@ -1,0 +1,215 @@
+.portfolio {
+  padding: 70px 0 80px;
+
+  @include tablet {
+    padding: 50px 0 60px;
+  }
+
+  @include mobile {
+    padding: 40px 0 40px;
+  }
+}
+
+.portfolio__container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1170px;
+}
+
+.portfolio__title {
+  margin: 0 auto 60px;
+
+  @include tablet {
+    margin-bottom: 40px;
+    max-width: 750px;
+  }
+
+  @include mobile {
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+.portfolio__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 60px;
+
+  @include mobile {
+    margin-bottom: 25px;
+  }
+}
+
+.portfolio__nav-item {
+  margin: 0 2px 20px;
+  padding: 3px 25px;
+  color: $color-yellow;
+  border: 1px solid $color-yellow;
+  line-height: 27px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color $default-transition-settings, background-color $default-transition-settings;
+  cursor: pointer;
+  outline: 0;
+  background-color: $color-transparent;
+
+  &--active {
+    color: $color-default-white;
+    background-color: $color-yellow;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+    background-color: $color-yellow;
+  }
+}
+
+.portfolio__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.portfolio__item {
+  position: relative;
+  width: 20%;
+
+  @include desktop {
+    width: 25%;
+  }
+
+  @include tablet {
+    width: 33.3%;
+  }
+
+  @include mobile {
+    width: 50%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.portfolio__img-wrap {
+  img {
+    object-fit: cover;
+  }
+}
+
+.portfolio__icons-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100px;
+
+  @include mobile-sm {
+    margin-bottom: 10px;
+    width: 70px;
+  }
+}
+
+.portfolio__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid $color-default-white;
+
+  @include mobile-sm {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $color-yellow;
+  }
+
+  svg {
+    fill: $color-default-white;
+
+    @include mobile-sm {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.portfolio__icon:hover svg,
+.portfolio__icon:focus svg {
+  fill: $color-yellow;
+}
+
+.portfolio__icon-link svg {
+  transform: rotate(45deg);
+}
+
+.portfolio__subtitle {
+  margin: 0 0 20px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: $color-default-white;
+  text-transform: uppercase;
+
+  @include desktop {
+    font-size: 16px;
+  }
+
+  @include mobile-sm {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
+
+.portfolio__text {
+  color: $color-default-white;
+
+  @include mobile-sm {
+    font-size: 9px;
+    line-height: 12px;
+  }
+}
+
+.portfolio__item:hover .overlay-zoom {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.portfolio__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color-transparent;
+  width: 190px;
+}
+
+.portfolio__item-hidden {
+  @include mobile {
+    display: none;
+  }
+}
+
+.filter-show {
+  animation: zoomIn 1s;
+}
+
+.filter-hide {
+  animation: zoomOut 1.5s forwards;
+}

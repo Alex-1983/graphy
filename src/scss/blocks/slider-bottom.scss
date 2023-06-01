@@ -1,0 +1,19 @@
+.slider-bottom__item {
+  position: relative;
+  width: 380px;
+}
+
+.slider-bottom__img-wrap {
+  img {
+    width: 380px;
+    height: 200px;
+  }
+}
+
+.slider-bottom__item:hover .overlay-zoom,
+.slider-bottop__item:focus .overlay-zoom {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.field-text__input-wrap {
+  display: block;
+}
+
+.field-text__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-bottom: 1px solid $color-black;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  transition: border $default-transition-settings;
+  outline: 0;
+
+  &:focus {
+    border-bottom: 1px solid $color-yellow;
+  }
+}
+
+.field-text__help-text {
+  display: block;
+  font-size: 10px;
+  line-height: 12px;
+  color: $color-transparent;
+}
+
+.field-text--error .field-text__input {
+  border-color: #d8544f;
+}
+
+.field-text--error .field-text__input,
+.field-text--error .field-text__help-text {
+  color: #d8544f;
+}
+
+
+.field-text--error .field-text__input::placeholder{
+  color: #d8544f;
+}

@@ -1,0 +1,60 @@
+.call {
+  position: relative;
+  padding: 120px 0 120px;
+  z-index: 0;
+  background: $color-black url("../img/call/call-to-action-img@1x.jpg") fixed center center/cover no-repeat;
+
+  @include retina {
+    background: $color-black url("../img/call/call-to-action-img@2x.jpg") fixed center center/cover no-repeat;
+  }
+
+  @include retina {
+    background: $color-black url("../img/call/call-to-action-img@1x.webp") fixed center center/cover no-repeat;
+  }
+
+  @include retina {
+    background: $color-black url("../img/call/call-to-action-img@2x.webp") fixed center center/cover no-repeat;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-default-black;
+    opacity: 0.7;
+    z-index: -1;
+  }
+}
+
+.call__title {
+  margin: 0 0 10px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: $color-default-white;
+  text-align: center;
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.call__text {
+  margin: 0 0 40px;
+  padding: 0;
+  font-weight: 400;
+  color: $color-default-white;
+  text-align: center;
+}
+
+.call__btn {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  background-color: $color-transparent;
+}

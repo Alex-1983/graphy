@@ -1,0 +1,120 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 285px 0;
+  height: 100vh;
+
+  background: $color-black url("../img/banner/banner-img@1x.jpg") center center/cover no-repeat;
+
+  @include retina {
+    background: $color-black url("../img/banner/banner-img@2x.jpg") center center/cover no-repeat;
+  }
+
+  @include retina {
+    background: $color-black url("../img/banner/banner-img@1x.webp") center center/cover no-repeat;
+  }
+
+  @include retina {
+    background: $color-black url("../img/banner/banner-img@2x.webp") center center/cover no-repeat;
+  }
+
+  @include tablet {
+    padding: 220px 0;
+  }
+
+  @include mobile {
+    padding: 170px 0;
+  }
+}
+
+.banner__content {
+  width: 560px;
+
+  @include tablet {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 750px;
+  }
+
+  @include mobile {
+    width: auto;
+    text-align:center;
+  }
+}
+
+.banner__title {
+  margin: 0 0 20px;
+  padding: 0;
+
+  font-family: $font-family-secondary;
+  font-size: 66px;
+  line-height: 76px;
+  color: $color-yellow;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: opacity 0.8s ease 0s, transform 0.8s ease 0s;
+
+  @include mobile {
+    font-size: 40px;
+    line-height: 1.25;
+  }
+}
+
+.banner__title.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.banner__subtitle {
+  margin: 0 0 5px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 6px;
+  color: $color-default-white;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+
+  @include mobile {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+}
+
+.banner__subtitle.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.banner__descr {
+  margin: 0 0 30px;
+  padding: 0;
+  color: $color-default-white;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: opacity 0.8s ease 0.8s, transform 0.8s ease 0.8s;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+.banner__descr.active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+
+}
+
+.banner__link {
+  display: block;
+  width: 230px;
+
+  @include mobile {
+    margin: 0 auto;
+  }
+}

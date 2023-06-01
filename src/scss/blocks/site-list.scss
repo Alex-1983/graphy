@@ -1,0 +1,132 @@
+.site-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 780px;
+  z-index: 100;
+
+  @include tablet {
+    width: 80%;
+    max-width: 535px;
+  }
+
+  @include mobile {
+    position: fixed;
+    flex-direction: column;
+
+    flex-wrap: nowrap;
+    transform: translateX(-100%);
+    top: 76px;
+    left: 0;
+    z-index: 2;
+    width: 320px;
+    height: 100vh;
+    padding: 0;
+    overflow-y: auto;
+    background-color: $color-default-white;
+    transition: transform $default-transition-settings;
+  }
+}
+
+.site-list__item {
+  margin-right: 30px;
+
+  @include tablet {
+    margin-right: 15px;
+  }
+
+  @include mobile {
+    margin: 0;
+  }
+
+  &:nth-child(9n) {
+    margin-right: 0;
+  }
+}
+
+.site-list__link {
+  position: relative;
+  display: block;
+  padding: 15px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-default-white;
+  transition: $default-transition-settings;
+  text-transform: uppercase;
+
+  @include tablet {
+    padding: 7px 0;
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+  @include mobile {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-text;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: $color-yellow;
+    transition: $default-transition-settings;
+
+    @include mobile {
+      height: 0;
+    }
+  }
+
+  &--active {
+    color: $color-yellow;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      right: auto;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: $color-yellow;
+      transition: $default-transition-settings;
+
+      @include mobile {
+        width: 0;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-yellow;
+    cursor: pointer;
+  }
+}
+
+.main-nav--open .site-list {
+  @include mobile {
+    transform: translateX(0);
+  }
+}
+
+.header--white .site-list__link {
+  color: $color-gray-dark;
+
+  &:hover,
+  &:focus {
+    color: $color-yellow;
+    cursor: pointer;
+  }
+}
+
+.header--white .site-list__link--active {
+  color: $color-yellow;
+}

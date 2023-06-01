@@ -1,0 +1,42 @@
+.shots {
+  padding: 80px 0 80px;
+
+  @include tablet {
+    padding: 50px 0 60px;
+  }
+
+  @include mobile {
+    position: relative;
+    padding: 40px 0 0;
+  }
+}
+
+.shots__title {
+  margin-bottom: 50px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include mobile {
+    margin-bottom: 25px;
+  }
+}
+
+.shots__icon  {
+  display: flex;
+  margin: auto;
+  background-color: $color-transparent;
+}
+
+.shots__icon {
+  svg {
+    margin: auto;
+    fill: $color-default-white;
+  }
+
+  &:hover,
+  &:focus  {
+    fill: $color-yellow;
+  }
+}

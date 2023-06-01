@@ -1,0 +1,41 @@
+.to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $color-yellow;
+  background-color: $color-black;
+  transition: background-color $default-transition-settings;
+
+  @include mobile {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  &:hover {
+    background-color: $color-yellow;
+  }
+
+  svg {
+    fill: $color-yellow;
+  }
+}
+
+.to-top:hover svg {
+  fill: $color-default-white;
+}
+
+.to-top {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.to-top--visible {
+  opacity: 1;
+  visibility: visible;
+}

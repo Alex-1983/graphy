@@ -1,0 +1,98 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 345px;
+
+  @include tablet {
+    max-width: 750px;
+  }
+
+  blockquote {
+    margin: 0 0 15px;
+  }
+}
+
+.post__inner {
+  position: relative;
+}
+
+.post__title {
+  margin: 20px 0 15px;
+  padding: 0;
+  font-size: 16px;
+  color: $color-black;
+  line-height: 26px;
+}
+
+.post__link {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 500;
+  max-width: 200px;
+  transition: color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-yellow;
+  }
+
+  svg {
+    transition: fill $default-transition-settings;
+    margin-left: 10px;
+  }
+}
+
+.post__link:hover,
+.post__link:focus {
+  svg {
+    fill: $color-yellow;
+  }
+}
+
+.post__overlay-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 1px solid $color-yellow;
+
+  @include mobile-sm {
+    padding: 10%;
+  }
+}
+
+.post__img-wrap {
+  @include tablet {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.post__icon-wrap {
+  svg {
+    margin: auto;
+    fill: $color-default-white;
+
+    &:hover  {
+      fill: $color-yellow;
+    }
+  }
+}
+
+.post__inner:hover .overlay-zoom,
+.post__inner:focus .overlay-zoom {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  cursor: pointer;
+}

@@ -1,0 +1,69 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  blockquote {
+    margin: 0;
+  }
+}
+
+.comment__title {
+  margin: 0 0 20px;
+  padding: 0;
+  order: 2;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: $color-default-white;
+  text-align: center;
+  transform: translate(0px, 50%);
+  opacity: 0;
+  transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
+}
+
+.comment__img-wrap {
+  order: 1;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+  border: 4px solid $color-yellow;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
+}
+
+.comment__description {
+  order: 3;
+  transform: translate(0px, 50%);
+  opacity: 0;
+  transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
+}
+
+.comment__text {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-style: italic;
+  color: $color-default-white;
+  text-align: center;
+}
+
+.reviews__item.active .comment__img-wrap {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reviews__item.active .comment__title {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+}
+
+.reviews__item.active .comment__description {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;
+}

@@ -1,0 +1,52 @@
+// Vendor
+//---------------------------------
+
+@import "vendor/normalize";
+
+// стили для свайпера
+//---------------------------------
+
+@import "../../node_modules/swiper/swiper-bundle.min";
+
+// Global
+//---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+
+// Blocks
+//---------------------------------
+
+@import "blocks/animation";
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/site-list";
+@import "blocks/burger";
+@import "blocks/section-title";
+@import "blocks/banner";
+@import "blocks/about";
+@import "blocks/social";
+@import "blocks/servies";
+@import "blocks/overlay-zoom";
+@import "blocks/portfolio";
+@import "blocks/counter";
+@import "blocks/price";
+@import "blocks/price-card";
+@import "blocks/call";
+@import "blocks/blog";
+@import "blocks/post";
+@import "blocks/reviews";
+@import "blocks/comment";
+@import "blocks/shots";
+@import "blocks/slider-top";
+@import "blocks/slider-bottom";
+@import "blocks/contact";
+@import "blocks/form";
+@import "blocks/contact-info";
+@import "blocks/field-text";
+@import "blocks/footer";
+@import "blocks/to-top";

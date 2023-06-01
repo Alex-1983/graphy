@@ -1,0 +1,22 @@
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  to {
+    visibility: hidden;
+    transform: scale(0);
+    width: 0;
+    height: 0;
+  }
+}

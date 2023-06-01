@@ -1,0 +1,78 @@
+.price-card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+  width: 31.4%;
+  border: 1px solid $color-yellow;
+  border-top: 10px solid $color-yellow;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+
+  @include mobile {
+    width: 100%;
+		margin: 0;
+		flex-shrink: 0;
+  }
+}
+
+.price-card__title {
+  margin: 0;
+  padding: 30px 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: $color-black;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include tablet {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+.price-card__rate {
+  margin-bottom: 40px;
+  padding: 11px 30px 9px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  color: $color-default-white;
+  background-color: $color-black;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  small {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.price-card__list {
+  margin-bottom: 40px;
+  width: 100%;
+  border-bottom: 1px solid $color-yellow;
+}
+
+.price-card__list-item {
+  text-align: center;
+  padding: 12px;
+  border-top: 1px solid $color-yellow;
+}
+
+.price-card__link {
+  margin-top: auto;
+  width: 180px;
+}
+
+.price-card.active {
+  opacity: 1;
+  transform: scale(1);
+}

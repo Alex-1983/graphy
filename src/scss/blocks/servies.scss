@@ -1,0 +1,172 @@
+.servies {
+  position: relative;
+  padding: 70px 0 80px;
+  background: $color-gray-darked url("../img/servies/servies-bg@1x.jpg") center center/cover no-repeat;
+
+  @include retina {
+    background: $color-gray-darked url("../img/servies/servies-bg@2x.jpg") center center/cover no-repeat;
+  }
+
+  @include retina {
+    background: $color-gray-darked url("../img/servies/servies-bg@1x.webp") center center/cover no-repeat;
+  }
+
+  @include retina {
+    background: $color-gray-darked url("../img/servies/servies-bg@2x.webp") center center/cover no-repeat;
+  }
+
+
+  @include tablet {
+    padding: 50px 0 40px;
+  }
+
+  @include mobile {
+    padding: 40px 0 40px;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-default-black;
+    opacity: 0.7;
+  }
+}
+
+.servies__container {
+  max-width: 1170px;
+}
+
+.servies__title {
+  margin-bottom: 60px;
+
+  @include mobile {
+    margin-bottom: 25px;
+  }
+}
+
+.servies__slider {
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 750px;
+  }
+
+  @include mobile {
+    max-width: 500px;
+  }
+}
+
+.servies__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  height: auto;
+  align-items: center;
+  background-color: $color-default-white;
+  border-right: 1px solid $color-yellow;
+  transition: background-color $default-transition-settings;
+
+  @include tablet {
+    padding: 40px 2%;
+  }
+
+  @include tablet {
+    padding: 40px 25px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-yellow;
+  }
+}
+
+.servies__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 34px;
+  width: 70px;
+  height: 70px;
+  border: 1px solid $color-yellow;
+  transition: all $default-transition-settings;
+}
+
+.servies__item-title {
+  margin: 0 0 10px;
+  padding: 0 20px;
+  width: 190px;
+  font-size: 16px;
+  line-height: 26px;
+  color: $color-black;
+  text-transform: uppercase;
+  transition: color $default-transition-settings;
+  text-align: center;
+
+}
+
+.servies__item-descr {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.3;
+  text-align: center;
+  transition: color $default-transition-settings;
+}
+
+.servies__button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color $default-transition-settings;
+  z-index: 900;
+  background-color: rgba(222, 171, 58, 0.5);
+  border: 1px solid $color-transparent;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    fill: rgba(255, 255, 255, 0.5);
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}
+
+.servies__item:hover .servies__icon-wrap {
+  border: 1px solid $color-default-white;
+  background-color: $color-default-white;
+
+  svg {
+    fill: $color-yellow;
+  }
+}
+
+.servies__item:hover .servies__item-title,
+.servies__item:hover .servies__item-descr {
+  color: $color-default-white;
+}
+
+.servies__slider:hover .servies__button {
+  border-color: rgba(255, 255, 255, 1);
+  background-color: rgba(222, 171, 58, 1);
+}
+
+.servies__slider:hover .servies__button {
+  svg {
+    fill: rgba(255, 255, 255, 1);
+  }
+}

@@ -1,0 +1,37 @@
+.page {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%; // stylelint-disable-line
+  min-width: 320px;
+  min-height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family-primary;
+  color: $color-text;
+  background-color: $color-default-white;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100 * var(--vh, 1vh));
+}
+
+.page__content {
+  flex-grow: 1;
+}
+
+.page__footer-wrapper {
+  flex-shrink: 0;
+}
