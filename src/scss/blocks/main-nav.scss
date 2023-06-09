@@ -8,6 +8,13 @@
   }
 }
 
+.main-nav__logo {
+  transition: box-shadow $default-transition-settings;
+  &:focus {
+    box-shadow: 0px 0px 15px 5px #deab3a;
+  }
+}
+
 .main-nav__list {
   margin-left: auto;
 }

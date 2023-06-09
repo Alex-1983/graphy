@@ -122,6 +122,7 @@
   height: 40px;
   background-color: transparent;
   border: 1px solid $color-default-white;
+  transition: border $default-transition-settings, background-color $default-transition-settings;
 
   @include mobile-sm {
     padding: 5px;
@@ -135,6 +136,7 @@
   }
 
   svg {
+    transition: fill $default-transition-settings;
     fill: $color-default-white;
 
     @include mobile-sm {
@@ -190,12 +192,10 @@
 }
 
 .portfolio__link {
-  position: relative;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: $color-transparent;
   width: 190px;
 }

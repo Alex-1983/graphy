@@ -5,37 +5,33 @@
 <body class="page__body">
 
   <div class="page__inner">
-    <div class="page__content">
-      @include('html/header.html')
 
-      <main class="main">
-        @include('html/banner.html')
-        @include('html/about.html')
-        @include('html/servies.html')
-        @include('html/portfolio.html')
-        @include('html/counter.html')
-        @include('html/price.html')
-        @include('html/call.html')
-        @include('html/blog.html')
-        @include('html/reviews.html')
-        @include('html/shots.html')
-        @include('html/contact.html')
-      </main>
+    @include('html/header.html')
 
-    </div>
+    <main class="page__content">
+      @include('html/promo.html')
+      @include('html/about.html')
+      @include('html/services.html')
+      @include('html/portfolio.html')
+      @include('html/counter.html')
+      @include('html/price.html')
+      @include('html/call.html')
+      @include('html/blog.html')
+      @include('html/reviews.html')
+      @include('html/shots.html')
+      @include('html/contact.html')
+    </main>
 
-    <div class="page__footer-wrapper">
-      @include('html/footer.html')
-    </div>
-
-    <a class="to-top to-top--visible" id="to-top" href="#">
-      <svg width="25" height="25">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-to-top"></use>
-      </svg>
-    </a>
+    @include('html/footer.html')
 
   </div>
-  
+
+  <a class="to-top to-top--visible" id="to-top" href="#">
+    <svg width="25" height="25">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-to-top"></use>
+    </svg>
+  </a>
+
   <script src="js/main.js"></script>
 </body>
 

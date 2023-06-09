@@ -78,14 +78,18 @@
   }
 }
 
-.post__icon-wrap {
+.post__icon-link {
   svg {
     margin: auto;
-    fill: $color-default-white;
+    fill: $color-yellow;
+  }
+}
 
-    &:hover  {
-      fill: $color-yellow;
-    }
+.post__icon-link {
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
   }
 }
 

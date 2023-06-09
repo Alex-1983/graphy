@@ -22,6 +22,7 @@
   }
 
   svg {
+    transition: fill $default-transition-settings;
     fill: $color-yellow;
   }
 }

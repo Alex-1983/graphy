@@ -1,18 +1,18 @@
-.servies {
+.services {
   position: relative;
   padding: 70px 0 80px;
-  background: $color-gray-darked url("../img/servies/servies-bg@1x.jpg") center center/cover no-repeat;
+  background: $color-gray-darked url("../img/services/services-bg@1x.jpg") center center/cover no-repeat;
 
   @include retina {
-    background: $color-gray-darked url("../img/servies/servies-bg@2x.jpg") center center/cover no-repeat;
+    background: $color-gray-darked url("../img/services/services-bg@2x.jpg") center center/cover no-repeat;
   }
 
   @include retina {
-    background: $color-gray-darked url("../img/servies/servies-bg@1x.webp") center center/cover no-repeat;
+    background: $color-gray-darked url("../img/services/services-bg@1x.webp") center center/cover no-repeat;
   }
 
   @include retina {
-    background: $color-gray-darked url("../img/servies/servies-bg@2x.webp") center center/cover no-repeat;
+    background: $color-gray-darked url("../img/services/services-bg@2x.webp") center center/cover no-repeat;
   }
 
 
@@ -36,11 +36,11 @@
   }
 }
 
-.servies__container {
+.services__container {
   max-width: 1170px;
 }
 
-.servies__title {
+.services__title {
   margin-bottom: 60px;
 
   @include mobile {
@@ -48,7 +48,7 @@
   }
 }
 
-.servies__slider {
+.services__slider {
   margin: 0 auto;
 
   @include tablet {
@@ -60,7 +60,7 @@
   }
 }
 
-.servies__item {
+.services__item {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@
   }
 }
 
-.servies__icon-wrap {
+.services__icon-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,10 +93,10 @@
   width: 70px;
   height: 70px;
   border: 1px solid $color-yellow;
-  transition: all $default-transition-settings;
+  transition: background-color $default-transition-settings, border $default-transition-settings;
 }
 
-.servies__item-title {
+.services__item-title {
   margin: 0 0 10px;
   padding: 0 20px;
   width: 190px;
@@ -109,7 +109,7 @@
 
 }
 
-.servies__item-descr {
+.services__item-descr {
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -118,7 +118,7 @@
   transition: color $default-transition-settings;
 }
 
-.servies__button {
+.services__button {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -146,27 +146,29 @@
   }
 }
 
-.servies__item:hover .servies__icon-wrap {
+.services__item:hover .services__icon-wrap {
   border: 1px solid $color-default-white;
   background-color: $color-default-white;
 
   svg {
+    transition: fill $default-transition-settings;
     fill: $color-yellow;
   }
 }
 
-.servies__item:hover .servies__item-title,
-.servies__item:hover .servies__item-descr {
+.services__item:hover .services__item-title,
+.services__item:hover .services__item-descr {
   color: $color-default-white;
 }
 
-.servies__slider:hover .servies__button {
+.services__slider:hover .services__button {
   border-color: rgba(255, 255, 255, 1);
   background-color: rgba(222, 171, 58, 1);
 }
 
-.servies__slider:hover .servies__button {
+.services__slider:hover .services__button {
   svg {
+    transition: fill $default-transition-settings;
     fill: rgba(255, 255, 255, 1);
   }
 }

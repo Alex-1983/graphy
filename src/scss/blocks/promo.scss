@@ -1,22 +1,21 @@
-.banner {
+.promo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 285px 0;
-  height: 100vh;
 
-  background: $color-black url("../img/banner/banner-img@1x.jpg") center center/cover no-repeat;
+  background: $color-black url("../img/promo/promo-img@1x.jpg") center center/cover no-repeat;
 
   @include retina {
-    background: $color-black url("../img/banner/banner-img@2x.jpg") center center/cover no-repeat;
+    background: $color-black url("../img/promo/promo-img@2x.jpg") center center/cover no-repeat;
   }
 
   @include retina {
-    background: $color-black url("../img/banner/banner-img@1x.webp") center center/cover no-repeat;
+    background: $color-black url("../img/promo/promo-img@1x.webp") center center/cover no-repeat;
   }
 
   @include retina {
-    background: $color-black url("../img/banner/banner-img@2x.webp") center center/cover no-repeat;
+    background: $color-black url("../img/promo/promo-img@2x.webp") center center/cover no-repeat;
   }
 
   @include tablet {
@@ -28,7 +27,7 @@
   }
 }
 
-.banner__content {
+.promo__content {
   width: 560px;
 
   @include tablet {
@@ -43,8 +42,8 @@
   }
 }
 
-.banner__title {
-  margin: 0 0 20px;
+.promo__title {
+  margin: 0 0 5px;
   padding: 0;
 
   font-family: $font-family-secondary;
@@ -61,15 +60,16 @@
   }
 }
 
-.banner__title.active {
+.promo__title.active {
   transform: translate(0px, 0px);
   opacity: 1;
 }
 
-.banner__subtitle {
-  margin: 0 0 5px;
+.promo__subtitle {
+  display: block;
+  margin: 20px 0 0;
   padding: 0;
-
+  font-family: $font-family-primary;
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
@@ -86,12 +86,12 @@
   }
 }
 
-.banner__subtitle.active {
+.promo__subtitle.active {
   transform: translate(0px, 0px);
   opacity: 1;
 }
 
-.banner__descr {
+.promo__descr {
   margin: 0 0 30px;
   padding: 0;
   color: $color-default-white;
@@ -104,13 +104,13 @@
   }
 }
 
-.banner__descr.active {
+.promo__descr.active {
   transform: translate(0px, 0px);
   opacity: 1;
 
 }
 
-.banner__link {
+.promo__link {
   display: block;
   width: 230px;
 

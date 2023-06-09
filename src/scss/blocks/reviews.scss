@@ -3,18 +3,18 @@
   padding: 100px 0 85px;
 
   z-index: 0;
-  background: $color-black url("../img/reviews/reviews-img@1x.jpg") fixed center center/cover no-repeat;
+  background: $color-black url("../img/reviews/reviews-img@1x.jpg") center center/cover no-repeat;
 
   @include retina {
-    background: $color-black url("../img/reviews/reviews-img@2x.jpg") fixed center center/cover no-repeat;
+    background: $color-black url("../img/reviews/reviews-img@2x.jpg") center center/cover no-repeat;
   }
 
   @include retina {
-    background: $color-black url("../img/reviews/reviews-img@1x.webp") fixed center center/cover no-repeat;
+    background: $color-black url("../img/reviews/reviews-img@1x.webp") center center/cover no-repeat;
   }
 
   @include retina {
-    background: $color-black url("../img/reviews/reviews-img@2x.webp") fixed center center/cover no-repeat;
+    background: $color-black url("../img/reviews/reviews-img@2x.webp") center center/cover no-repeat;
   }
 
   &::before {
@@ -53,12 +53,3 @@
 .reviews .swiper-pagination-bullet-active {
   background-color: $color-yellow;
 }
-
-// .reviews__item {
-//   transform: scale(0);
-//   transition: transform 0.8s ease 0s;
-// }
-
-// .reviews__item.active {
-//   transform: scale(1);
-// }

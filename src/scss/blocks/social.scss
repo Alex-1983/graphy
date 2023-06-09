@@ -33,6 +33,7 @@
 
 .social__link {
   svg {
+    transition: fill $default-transition-settings;
     width: 16px;
     height: 16px;
     fill: $color-yellow;

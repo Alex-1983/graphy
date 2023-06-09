@@ -2,18 +2,26 @@
   position: relative;
   padding: 120px 0 120px;
   z-index: 0;
-  background: $color-black url("../img/call/call-to-action-img@1x.jpg") fixed center center/cover no-repeat;
+  background: $color-black url("../img/call/call-to-action-img@1x.jpg") center center/cover no-repeat;
 
   @include retina {
-    background: $color-black url("../img/call/call-to-action-img@2x.jpg") fixed center center/cover no-repeat;
+    background: $color-black url("../img/call/call-to-action-img@2x.jpg") center center/cover no-repeat;
   }
 
   @include retina {
-    background: $color-black url("../img/call/call-to-action-img@1x.webp") fixed center center/cover no-repeat;
+    background: $color-black url("../img/call/call-to-action-img@1x.webp") center center/cover no-repeat;
   }
 
   @include retina {
-    background: $color-black url("../img/call/call-to-action-img@2x.webp") fixed center center/cover no-repeat;
+    background: $color-black url("../img/call/call-to-action-img@2x.webp") center center/cover no-repeat;
+  }
+
+  @include tablet {
+    padding: 50px 0 60px;
+  }
+
+  @include mobile {
+    padding: 40px 0 40px;
   }
 
   &::before {

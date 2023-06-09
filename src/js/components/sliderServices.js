@@ -1,12 +1,12 @@
 import Swiper, { Navigation } from 'swiper';
 
-const sliderServies = () => {
-  const servies = document.querySelector('.servies');
- 
-  if (servies) {
-    const slider = servies.querySelector('.swiper');
-    const sliderBtnPrevious = servies.querySelector('.servies__button--prev');
-    const sliderBtnNext = servies.querySelector('.servies__button--next');
+const sliderServices = () => {
+  const services = document.querySelector('.services');
+
+  if (services) {
+    const slider = services.querySelector('.swiper');
+    const sliderBtnPrevious = services.querySelector('.services__button--prev');
+    const sliderBtnNext = services.querySelector('.services__button--next');
 
     const swiper = new Swiper(slider, {
       modules: [Navigation],
@@ -39,4 +39,4 @@ const sliderServies = () => {
   }
 };
 
-export {sliderServies};
+export {sliderServices};

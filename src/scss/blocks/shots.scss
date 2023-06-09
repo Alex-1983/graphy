@@ -27,16 +27,17 @@
   display: flex;
   margin: auto;
   background-color: $color-transparent;
+
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
 }
 
 .shots__icon {
   svg {
     margin: auto;
-    fill: $color-default-white;
-  }
-
-  &:hover,
-  &:focus  {
     fill: $color-yellow;
   }
 }
